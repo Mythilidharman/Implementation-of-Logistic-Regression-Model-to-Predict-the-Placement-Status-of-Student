@@ -61,8 +61,26 @@ from sklearn.linear_model import LogisticRegression
 clf=LogisticRegression()
 clf.fit(x_train,y_train)
 clf.score(x_test,y_test)
+from sklearn.linear_model import LogisticRegression
+lr = LogisticRegression(solver = "liblinear") 
+lr.fit(x_train,y_train)
+y_pred = lr.predict(x_test)
+y_pred
+
+from sklearn.metrics import accuracy_score
+accuracy = accuracy_score(y_test,y_pred)
+accuracy
+
+from sklearn.metrics import confusion_matrix
+confusion = (y_test,y_pred)
+confusion 
+
+from sklearn.metrics import classification_report
+classification_report1 = classification_report(y_test,y_pred)
+print(classification_report1)
 # Predicting for random value
 clf.predict([[1	,78.33,	1,	2,	77.48,	2,	86.5,	0,	66.28]])
+
 ```
 
 ## Output:
@@ -86,6 +104,8 @@ clf.predict([[1	,78.33,	1,	2,	77.48,	2,	86.5,	0,	66.28]])
 ![image](https://github.com/Mythilidharman/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/119104110/252f0699-6313-4607-89c5-82187f157b38)
 ## Creating a Classifier using Sklearn
 ![image](https://github.com/Mythilidharman/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/119104110/89177e27-b560-45b1-ad9b-7dbf9e9f1d26)
+## Confusion matrix and Classification report
+![image](https://github.com/Mythilidharman/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/119104110/30f9ea15-384e-4fa5-90d0-94a45995f0f3)
 ## Predicting for random value
 ![image](https://github.com/Mythilidharman/Implementation-of-Logistic-Regression-Model-to-Predict-the-Placement-Status-of-Student/assets/119104110/cd0600e0-52da-4ba8-a768-63f6394e7175)
 
